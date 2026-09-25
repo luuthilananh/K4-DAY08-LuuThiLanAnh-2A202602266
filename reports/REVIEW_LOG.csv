@@ -1,0 +1,9 @@
+round,frame_id,object,action,rule_or_reason
+1,frame_0099.jpg,SUV lớn ở làn giữa sát mép dưới (tâm khoảng x555 y647) đèn pha rất sáng,added,AI bỏ sót dù xe gần và rõ thân; guideline: nhìn rõ thân xe thì vẽ box ôm sát thân gồm cả đèn và không tính vệt sáng trên mặt đường
+1,frame_0099.jpg,một box AI ôm hai xe nối đuôi ở phía xa bên trái (khoảng x436 y303),deleted,Hai xe sát nhau phải vẽ hai box riêng; đã xoá box gộp và thêm hai box nhỏ cho từng xe
+1,frame_0099.jpg,xe đèn hậu đỏ ở làn phải (khoảng x1120 y502),edited,Box AI chỉ ôm cụm đèn hậu; nới box theo đường viền thân xe đoán được quanh cụm đèn (guideline: chỉ thấy đèn thì vẽ theo thân xe)
+1,frame_0312.jpg,box AI lớn gộp hai xe đèn đỏ ở làn phải (khoảng x893 y426),deleted,Hai xe sát nhau không gộp làm một; thay bằng hai box riêng cho từng xe
+1,frame_0312.jpg,xe tải thùng trắng ở làn giữa phía xa (khoảng x649 y321),added,AI bỏ sót hoàn toàn; xe tải là phương tiện từ 4 bánh nên thuộc lớp car
+1,frame_0331.jpg,box AI hẹp trên xe nhoè chuyển động ở mép phải dưới (khoảng x1056 y666),deleted,Box AI chỉ ôm một dải nhỏ của xe; xoá và vẽ lại box ôm toàn bộ vùng nhoè của thân xe trong ảnh (guideline: xe nhoè và xe bị cắt ở mép ảnh). round1_diff tính là 1 deleted + 1 added vì IoU giữa hai box dưới 0.5
+1,frame_0331.jpg,xe bị cắt ở mép dưới giữa ảnh (khoảng x847 y696),added,Chỉ thấy nửa trên thân xe; guideline: xe bị cắt ở mép ảnh thì chỉ vẽ phần nằm trong ảnh
+1,frame_0099.jpg,xe con tối màu ở làn trái gần mép dưới (khoảng x350 y604),accepted,Đã kiểm box AI ôm sát thân xe gồm đèn và không lấn vệt sáng trên mặt đường nên giữ nguyên; vệt phản chiếu đỏ dưới xe làn phải cũng không được gán theo guideline
